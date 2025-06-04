@@ -1,0 +1,158 @@
+:host {
+    display: block;
+    background-color: #4CAF50; /* El color verde de fondo principal */
+    padding: 60px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.faq-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.faq-left {
+    flex: 0 0 350px;
+    min-width: 280px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.faq-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.faq-right {
+    flex: 1;
+    min-width: 300px;
+    color: #1a1a2e;
+}
+
+.faq-header {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between; /* Empuja los elementos a los extremos */
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.faq-title {
+    font-size: 3em;
+    font-weight: bold;
+    color: #1a1a2e; /* Mantener este color si quieres que "FAQ'S" sea oscuro */
+    line-height: 1;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.faq-subtitle {
+    font-size: 1.2em;
+    color: #1a1a2e; /* Color oscuro para el subtítulo */
+    margin: 0;
+    line-height: 1;
+    text-align: right; /* Asegura que "Preguntas Frecuentes" esté a la derecha */
+}
+
+.faq-list {
+    background-color: #4CAF50; /* Fondo de la lista al mismo color que el principal */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item {
+    border-bottom: 1px solid #1a1a2e; /* Separador negro */
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    display: flex; /* Para centrar el texto verticalmente si es necesario */
+    align-items: center;
+    padding: 18px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #1a1a2e; /* Color blanco para el texto de la pregunta */
+    background-color: #4CAF50; /* Fondo de la pregunta al mismo color que el principal */
+    /* No se necesita cursor: pointer ni transición de fondo si no hay interacción */
+}
+
+/* Eliminar estilos relacionados con faq-answer y faq-icon */
+/* .faq-answer { ... } */
+/* .faq-icon { ... } */
+/* .faq-icon.rotated { ... } */
+
+
+/* Media Queries para responsividad (mantenerlos, ya que son para la disposición general) */
+@media (max-width: 992px) {
+    .faq-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .faq-left {
+        width: 80%;
+        flex: unset;
+        min-width: unset;
+    }
+
+    .faq-right {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .faq-header {
+        flex-direction: column; /* Apila el título y el subtítulo */
+        text-align: center; /* Centra los títulos */
+        align-items: center; /* Centra los items si es flex-direction column */
+        gap: 10px; /* Ajusta el espacio entre el título y el subtítulo */
+    }
+
+    .faq-title {
+        font-size: 2.5em;
+    }
+
+    .faq-subtitle {
+        font-size: 1.1em;
+        text-align: center; /* Centrar también en móvil */
+    }
+
+    .faq-question {
+        padding: 15px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 576px) {
+    :host {
+        padding: 40px 15px;
+    }
+
+    .faq-left {
+        width: 100%;
+    }
+
+    .faq-title {
+        font-size: 2em;
+    }
+
+    .faq-subtitle {
+        font-size: 1em;
+    }
+
+    .faq-question {
+        font-size: 0.95em;
+        padding: 12px 15px;
+    }
+}

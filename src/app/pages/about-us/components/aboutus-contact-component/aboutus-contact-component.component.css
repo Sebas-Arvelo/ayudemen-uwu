@@ -1,0 +1,187 @@
+:host {
+    display: block;
+    background-color: #24243d; /* Color de fondo oscuro */
+    padding: 60px 20px;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+}
+
+.contact-title {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.contact-description {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    color: #b0b0d6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify; /* Justificar el texto de la descripción */
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    align-items: start;
+}
+
+/* Alineación de los grupos de la izquierda */
+.left-group {
+    grid-column: 1;
+}
+
+/* Comentario y botón a la derecha */
+.right-group {
+    grid-column: 2;
+}
+
+.form-group.left-group {
+    margin-bottom: 0;
+}
+
+.form-group.right-group.large-textarea {
+    grid-row: 1 / span 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.right-group.large-textarea textarea {
+    min-height: 120px;
+    max-height: 180px;
+    width: 100%;
+    resize: vertical;
+}
+
+.form-action {
+    grid-column: 2;
+    margin-top: 15px;
+    text-align: right;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 0.9em;
+    color: #b0b0d6;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.form-control {
+    background-color: #1a1a2e;
+    border: 1px solid #3b3b5c;
+    border-radius: 5px;
+    padding: 12px 15px;
+    color: #ffffff;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #7f52ff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(127, 82, 255, 0.3);
+}
+
+/* El textarea de comentario ocupa solo la columna derecha */
+.form-group.large-textarea {
+    grid-column: 2;
+}
+
+.form-group.large-textarea label {
+    margin-bottom: 8px;
+}
+
+.form-group.large-textarea textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Colocar el botón de enviar debajo del comentario */
+.form-action {
+    grid-column: span 2; /* Ocupa ambas columnas */
+    margin-top: 0px;
+    text-align: right; /* Alinea el botón a la derecha (como en la imagen) */
+}
+
+.btn-submit {
+    background-color: #c0c0c0;
+    color: #1a1a2e;
+    padding: 15px 200px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #d0d0d0;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 0 15px;
+    }
+
+    .contact-title {
+        font-size: 2.5em;
+    }
+
+    .contact-description {
+        font-size: 1em;
+        margin-bottom: 30px;
+        text-align: left; /* Volver a alinear a la izquierda en móvil */
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+    }
+
+    .form-group.large-textarea {
+        grid-column: span 1; /* Ocupa toda la columna */
+    }
+
+    .form-action {
+        grid-column: span 1; /* Ocupa toda la columna */
+        margin-top: 8px;
+        text-align: center; /* Centrar el botón en móvil */
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-title {
+        font-size: 2em;
+    }
+
+    .form-group label {
+        font-size: 0.8em;
+    }
+}

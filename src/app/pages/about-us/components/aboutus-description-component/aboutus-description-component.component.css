@@ -1,0 +1,182 @@
+:host {
+    display: block;
+    background-color: #000000; /* Color de fondo oscuro principal */
+    overflow: hidden; /* Para manejar el desbordamiento de las imágenes si se superponen */
+    position: relative; /* Necesario para posicionar la barra inferior si es absoluta */
+    padding-bottom: 70px; /* Espacio para la barra inferior */
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    padding: 60px 40px; /* Relleno superior/inferior y lateral */
+    max-width: 1200px; /* Ancho máximo para el contenido */
+    margin: 0 auto; /* Centra el contenido */
+    gap: 40px; /* Espacio entre el texto y las imágenes */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.hero-content {
+    flex: 1; /* Ocupa el espacio disponible */
+    min-width: 300px; /* Ancho mínimo para el contenido de texto */
+    color: #ffffff; /* Color de texto general */
+}
+
+.hero-title {
+    font-size: 3.5em; /* Tamaño grande para el título */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff; /* Asegura que el título sea blanco */
+    line-height: 1.1; /* Espaciado entre líneas */
+}
+
+.highlight-b8 {
+    color: #4CAF50; /* El color verde que quieres para 'B8' */
+}
+
+.hero-description {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #b0b0d6; /* Color de texto más claro para la descripción */
+    max-width: 550px; /* Limita el ancho de la descripción */
+}
+
+.btn-create-tournament {
+    background-color: #f7a700; /* Color naranja distintivo del botón */
+    color: #1a1a2e; /* Color de texto oscuro para el botón */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-create-tournament:hover {
+    background-color: #e09600; /* Tono más oscuro al pasar el ratón */
+}
+
+.hero-images {
+    flex: 1; /* Ocupa el espacio disponible */
+    min-width: 350px; /* Ancho mínimo para el contenedor de imágenes */
+    display: flex;
+    justify-content: center; /* Centra las imágenes */
+    align-items: center;
+    position: relative; /* Para posicionar las imágenes secundarias */
+    padding: 20px; /* Espacio para las sombras y el efecto de stack */
+}
+
+.hero-images .main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados para la imagen principal */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+    display: block; /* Elimina espacios extra debajo de la imagen */
+    z-index: 2; /* Asegura que la imagen principal esté al frente */
+    position: relative;
+}
+
+/* Estilos para las imágenes secundarias (para el efecto de stack) */
+.hero-images .secondary-image {
+    position: absolute;
+    width: 90%; /* Ligeramente más pequeñas que la principal */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0.7; /* Ligeramente transparentes */
+    transform-origin: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.secondary-image-1 {
+    z-index: 1; /* Detrás de la imagen principal */
+    top: 15%;
+    left: 60%; /* Ajusta la posición para que se superponga */
+    transform: rotate(5deg) scale(0.9); /* Ligeramente rotada y escalada */
+}
+
+.secondary-image-2 {
+    z-index: 0; /* Más detrás */
+    top: 30%;
+    left: 70%;
+    transform: rotate(10deg) scale(0.8);
+}
+
+/* Barra inferior verde */
+.bottom-bar {
+    background-color: #47d76b; /* Verde vibrante */
+    color: #000000;
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: absolute; /* Para que quede en la parte inferior de la sección */
+    bottom: 0;
+    left: 40px;
+    width: calc(100% - 80px);
+    box-sizing: border-box; /* Incluye padding en el width */
+    z-index: 3; /* Asegura que esté por encima de todo lo demás */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 992px) {
+    .hero-section {
+        flex-direction: column; /* Apila el contenido y las imágenes */
+        text-align: center; /* Centra el texto */
+        padding: 40px 20px;
+    }
+
+    .hero-content {
+        margin-bottom: 40px; /* Espacio entre el texto y las imágenes */
+    }
+
+    .hero-title {
+        font-size: 2.8em;
+    }
+
+    .hero-description {
+        font-size: 1em;
+        max-width: 100%; /* Permite que la descripción ocupe todo el ancho */
+    }
+
+    .hero-images {
+        min-width: unset; /* Reinicia el min-width */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        height: 300px; /* Altura fija para el contenedor de imágenes en móvil */
+        overflow: hidden; /* Para ocultar partes de las imágenes si se desbordan */
+    }
+
+    .hero-images .main-image {
+        max-width: 80%; /* Reduce el tamaño de la imagen principal en móvil */
+        height: auto;
+    }
+
+    .secondary-image {
+        display: none; /* Oculta las imágenes secundarias en móvil para simplificar */
+        /* O puedes ajustar sus posiciones si quieres mantenerlas */
+    }
+
+    .bottom-bar {
+        font-size: 1em;
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2.2em;
+    }
+
+    .btn-create-tournament {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+
+    .bottom-bar {
+        font-size: 0.9em;
+        padding: 10px 15px;
+    }
+}
