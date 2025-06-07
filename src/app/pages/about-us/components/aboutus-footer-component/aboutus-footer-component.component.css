@@ -1,7 +1,7 @@
 :host {
     display: block;
     background-color: #1a1a2e; /* Color de fondo oscuro principal del footer */
-    color: #b0b0d6; /* Color de texto general para el footer */
+    color: #374957; /* Color de texto general para el footer */
     font-family: Arial, sans-serif; /* O la fuente que estés usando */
     padding-top: 40px; /* Relleno superior */
 }
@@ -18,11 +18,11 @@
 }
 
 .footer-logo img {
-    height: 60px; /* Altura del logo del footer */
+    height: 80px; /* Altura del logo del footer */
     width: auto;
-    margin-right: 40px; /* Espacio a la derecha del logo */
-    margin-left: -40px; /* Mueve el logo más a la izquierda */
-    filter: brightness(0) invert(1); /* Para que el logo sea blanco si es de color */
+    margin-right: 120px; /* Espacio a la derecha del logo */
+    margin-left: -20px; /* Mueve el logo más a la izquierda */
+
 }
 
 .footer-links {
@@ -73,14 +73,13 @@
 .footer-newsletter {
     flex: 0 0 350px; /* Ancho fijo para la sección de newsletter */
     min-width: 280px; /* Ancho mínimo para el responsivo */
-    text-align: right; /* Alinea el contenido a la derecha */
+    text-align: left; /* Alinea el contenido a la derecha */
 }
 
 .footer-newsletter h4 {
-    color: #7a7a9a; /* Gris oscuro para el título del newsletter */
+    color: #374957; /* Gris oscuro para el título del newsletter */
     font-size: 1.1em;
     margin-bottom: 15px;
-    text-transform: uppercase;
 }
 
 .newsletter-form {
@@ -111,7 +110,7 @@
 }
 
 .newsletter-btn {
-    background-color: #4CAF50; /* Verde brillante del botón */
+    background-color: #48D87B; /* Verde brillante del botón */
     color: #1a1a2e; /* Color de texto oscuro para el botón */
     padding: 10px 20px;
     border: none;
@@ -121,10 +120,11 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     white-space: nowrap; /* Evita que el texto se rompa */
+
 }
 
 .newsletter-btn:hover {
-    background-color: #3f9b43; /* Tono más oscuro al pasar el ratón */
+    background-color: #48D87B; /* Tono más oscuro al pasar el ratón */
 }
 
 .social-icons {
@@ -136,11 +136,18 @@
 .social-icon img {
     height: 25px; /* Tamaño de los iconos de redes sociales */
     width: 25px;
-    filter: brightness(0) invert(1); /* Para que los iconos sean blancos */
+    filter: none;
     opacity: 0.8;
     transition: opacity 0.3s ease;
+    /* Si el icono es SVG y usa currentColor, esto lo hará verde */
+    color: #48D87B;
 }
 
+/* Si los iconos son SVG embebidos directamente, también puedes forzar el color así: */
+.social-icon svg {
+    color: #48D87B;
+    fill: #48D87B;
+}
 .social-icon img:hover {
     opacity: 1;
 }

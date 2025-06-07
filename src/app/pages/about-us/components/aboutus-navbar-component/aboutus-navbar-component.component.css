@@ -7,9 +7,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000000; /* Color de fondo de la barra de navegación */
+    background-color: #141720; /* Color de fondo de la barra de navegación */
     padding: 10px 60px;
-    color: #ffffff; /* Color de texto general para la barra (para elementos como el título si hubiera) */
+    color: #E2E2E2; /* Color de texto general para la barra (para elementos como el título si hubiera) */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sutil sombra para dar profundidad */
 }
 
@@ -19,12 +19,12 @@
 }
 
 .logo img {
-    height: 40px;
-    width: 40px;
-    background-color: #50e3c2; /* Color de fondo del logo similar al de la imagen */
+    height: 56px;
+    width: 56px;
     border-radius: 8px;
     object-fit: contain; /* Asegura que la imagen del logo se ajuste bien */
     padding: 5px; /* Pequeño padding dentro del cuadrado del logo */
+    margin-left: 25px;
 }
 
 .nav-links {
@@ -32,16 +32,16 @@
     margin: 0;
     padding: 0;
     display: flex;
-    margin-left: 30px; /* Espacio entre el logo y los enlaces */
+    margin-left: 75px; /* Espacio entre el logo y los enlaces */
 }
 
 .nav-links li {
-    margin-right: 48px; /* Más espacio entre los enlaces */
+    margin-right: 50px; /* Más espacio entre los enlaces */
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #b0b0d6; /* Color de texto para los enlaces */
+    color: #E2E2E2; /* Color de texto para los enlaces */
     font-size: 16px;
     transition: color 0.3s ease;
     white-space: nowrap; /* Evita que los enlaces se rompan en varias líneas */

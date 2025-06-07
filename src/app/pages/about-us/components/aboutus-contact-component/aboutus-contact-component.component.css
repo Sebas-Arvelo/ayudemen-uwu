@@ -1,31 +1,29 @@
 :host {
     display: block;
-    background-color: #24243d; /* Color de fondo oscuro */
+    background-color: #1C212F; /* Color de fondo oscuro */
     padding: 60px 20px;
 }
-
 .contact-container {
     max-width: 900px;
     margin: 0 auto;
-    text-align: center;
-    color: #ffffff;
+    text-align: left;
+    color: #E2E2E2;
 }
 
 .contact-title {
     font-size: 3em;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #E2E2E2;
 }
 
 .contact-description {
     font-size: 1.1em;
     line-height: 1.6;
     margin-bottom: 50px;
-    color: #b0b0d6;
+    color: #E2E2E2;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0px;
     text-align: justify; /* Justificar el texto de la descripción */
 }
 
@@ -79,7 +77,7 @@
 
 .form-group label {
     font-size: 0.9em;
-    color: #b0b0d6;
+    color: #E2E2E2;
     margin-bottom: 8px;
     text-transform: uppercase;
     font-weight: bold;
@@ -90,7 +88,7 @@
     border: 1px solid #3b3b5c;
     border-radius: 5px;
     padding: 12px 15px;
-    color: #ffffff;
+    color: #E2E2E2;
     font-size: 1em;
     width: 100%;
     box-sizing: border-box;
@@ -119,13 +117,12 @@
 
 /* Colocar el botón de enviar debajo del comentario */
 .form-action {
-    grid-column: span 2; /* Ocupa ambas columnas */
-    margin-top: 0px;
+    margin-top: 15px;
     text-align: right; /* Alinea el botón a la derecha (como en la imagen) */
 }
 
 .btn-submit {
-    background-color: #c0c0c0;
+    background-color: #E2E2E2;
     color: #1a1a2e;
     padding: 15px 200px;
     border: none;
@@ -134,10 +131,11 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
+
 }
 
 .btn-submit:hover {
-    background-color: #d0d0d0;
+    background-color: #E2E2E2;
 }
 
 /* Media Queries para responsividad */

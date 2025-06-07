@@ -2,7 +2,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap'); */
 
 
-
 .card-container {
     width: 100%;
     display: flex;
@@ -13,7 +12,8 @@
     justify-content: center; /* Centra las tarjetas si hay espacio extra */
     align-items: center; /* Alinea verticalmente */
     padding: 40px 20px; /* Espaciado alrededor del contenedor */
-    background-color: #333333;
+    background-color: #141720;
+
 }
 
 
@@ -84,7 +84,7 @@
     right: 20px;
     width: 25px;
     height: 25px;
-    background-color: #52c41a; /* Color de icono, verde por defecto */
+    background-color: #48D87B; /* Color de icono, verde por defecto */
     border-radius: 100%;
     /* Puedes añadir un SVG o una imagen aquí si tienes un icono específico */
 }
@@ -98,7 +98,7 @@
 }
 
 .green-card .card-icon {
-    background-color: #52c41a; /* Icono verde */
+    background-color: #48D87B; /* Icono verde */
 }
 
 .white-card {
@@ -118,7 +118,7 @@
 }
 
 .white-card .card-icon {
-    background-color: #52c41a; /* Icono verde (puede ser diferente si quieres) */
+    background-color: #48D87B; /* Icono verde (puede ser diferente si quieres) */
 }
 
 
@@ -130,7 +130,7 @@
 }
 
 .purple-card .card-icon {
-    background-color: #48d87b; /* Icono morado */
+    background-color: #48D87B; /* Icono morado */
 }
 
 /* Ajustes para la imagen del centro, si es diferente */

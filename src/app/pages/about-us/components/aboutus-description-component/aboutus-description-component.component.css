@@ -1,6 +1,6 @@
 :host {
     display: block;
-    background-color: #1a1a2e; /* Color de fondo oscuro principal */
+    background-color: #141720; /* Color de fondo oscuro principal */
     overflow: hidden; /* Para manejar el desbordamiento de las imágenes si se superponen */
     position: relative; /* Necesario para posicionar la barra inferior si es absoluta */
     padding-bottom: 70px; /* Espacio para la barra inferior */
@@ -116,11 +116,15 @@
     font-weight: bold;
     position: absolute; /* Para que quede en la parte inferior de la sección */; /* Fija la barra en la parte inferior de la pantalla */
     bottom: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
     box-sizing: border-box; /* Incluye padding en el width */
     z-index: 3; /* Asegura que esté por encima de todo lo demás */
-    clip-path: polygon(5% 0, 95% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(3% 0, 97% 0, 100% 100%, 0% 100%);
+
+
+
 }
 
 /* Media Queries para responsividad */

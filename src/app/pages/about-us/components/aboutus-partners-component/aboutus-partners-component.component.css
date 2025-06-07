@@ -1,29 +1,29 @@
 /* Sección de partners */
 .about-partners-section {
   background: #232734;
-  padding: 0 0 80px 0;
+
 }
 .about-partners-banner {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 48px;
+  gap: 45px;
   background: #48D87B;
-  padding: 32px 0 28px 0;
+  padding: 44px 0 44px 0;
   border-radius: 0 0 0 0;
   min-height: 80px;
 }
 .about-partners-title {
   font-family: 'Sofia Sans ', sans-serif;
-  font-size: 44px;
-  font-weight: 900;
+  font-size: 50px;
+  font-weight: 770;
   color: #fff;
-  margin-right: 32px;
+  margin-right: 70px;
   letter-spacing: 1px;
 }
 .about-partner-logo {
-  height: 48px;
-  max-width: 180px;
+  height: 55px;
+  max-width: 190px;
   object-fit: contain;
   margin-right: 32px;
   background: transparent;
