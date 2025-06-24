@@ -1,0 +1,148 @@
+.duel-hero {
+  background: linear-gradient(135deg, #1a4ed8 0%, #6a8cff 100%);
+  padding: 60px 0 80px 0;
+  text-align: center;
+  position: relative;
+  color: #181818;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.duel-hero h1 {
+  font-size: 2.6em;
+  font-weight: 900;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.duel-avatar-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.duel-avatar-main img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #e2e2e2;
+}
+
+.duel-vs {
+  background: #fff;
+  color: #181818;
+  font-weight: bold;
+  font-size: 1.3em;
+  display: inline-block;
+  padding: 6px 38px;
+  border-radius: 8px;
+  margin-bottom: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.duel-form-section {
+  background: #181a22;
+  padding: 60px 0 40px 0;
+  position: relative;
+  border-top: 7px solid #ffbe2e;
+  margin-top: -40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.duel-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.duel-user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.duel-username {
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.duel-form {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.duel-form-row {
+  display: flex;
+  gap: 18px;
+}
+
+.duel-form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.duel-form-group label {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.duel-form-group input {
+  background: #232734;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 10px;
+  color: #fff;
+  font-size: 1em;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+
+.duel-form-group input:focus {
+  box-shadow: 0 0 0 2px #ffbe2e;
+}
+
+.duel-btn {
+  background: #ffbe2e;
+  color: #181818;
+  font-weight: bold;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 0;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.duel-btn:hover {
+  background: #e2a900;
+}
+
+@media (max-width: 600px) {
+  .duel-hero h1 {
+    font-size: 1.3em;
+  }
+  .duel-form {
+    max-width: 98vw;
+  }
+  .duel-form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

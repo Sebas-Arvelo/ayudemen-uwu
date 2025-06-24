@@ -1,0 +1,135 @@
+<!-- Oculta la navbar original en móvil, solo muestra en md+ -->
+<aboutus-navbar-component class="hidden md:block"></aboutus-navbar-component>
+<!-- Header móvil -->
+<div class="flex md:hidden items-center justify-between px-4 py-4 bg-[#181924]">
+  <img src="../../../assets/svgs/logo b8 svg.svg" alt="Logo B8" class="h-10 w-auto" />
+  <button class="text-white text-2xl" (click)="toggleMobileMenu()">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+</div>
+<!-- Menú móvil -->
+<div *ngIf="showMobileMenu" class="fixed inset-0 z-50 bg-[#181924] flex flex-col px-6 py-6 animate-fade-in">
+  <div class="flex items-center justify-between mb-8">
+    <img src="../../../assets/svgs/logo b8 svg.svg" alt="Logo B8" class="h-10 w-auto" />
+    <button class="text-white text-2xl" (click)="toggleMobileMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+  <nav class="flex flex-col gap-6 mb-auto">
+    <a href="#" class="text-white text-lg">Home</a>
+    <a href="#" class="text-white text-lg">Sobre B8</a>
+    <a href="#" class="text-white text-lg">Torneos</a>
+    <a href="#" class="text-white text-lg">Juegos</a>
+  </nav>
+  <div class="flex flex-col gap-3 mt-8">
+    <button class="w-full border border-white text-white font-bold py-2 rounded-lg">Registrarme</button>
+    <button class="w-full bg-[#7f52ff] text-white font-bold py-2 rounded-lg">Iniciar sesión</button>
+  </div>
+</div>
+<div class="min-h-screen bg-[#181e29] px-2 sm:px-4 md:px-16 py-4 md:py-8">
+  <!-- Barra de progreso -->
+  <div class="flex flex-col items-center mb-6">
+    <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-center text-white mb-2 tracking-wide">COMPLETA TU PAGO</h1>
+    <div class="flex items-center gap-4 mt-2">
+      <div class="flex flex-col items-center">
+        <span class="w-6 h-6 rounded-full bg-green-400 flex items-center justify-center text-xs font-bold text-[#181e29]">1</span>
+        <span class="text-green-400 text-xs mt-1">Torneo</span>
+      </div>
+      <div class="w-10 h-1 bg-green-400 rounded"></div>
+      <div class="flex flex-col items-center">
+        <span class="w-6 h-6 rounded-full bg-gray-600 flex items-center justify-center text-xs font-bold text-gray-300">2</span>
+        <span class="text-gray-400 text-xs mt-1">Dirección</span>
+      </div>
+      <div class="w-10 h-1 bg-gray-600 rounded"></div>
+      <div class="flex flex-col items-center">
+        <span class="w-6 h-6 rounded-full bg-gray-600 flex items-center justify-center text-xs font-bold text-gray-300">3</span>
+        <span class="text-gray-400 text-xs mt-1">Confirmación</span>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col lg:flex-row gap-8 max-w-7xl mx-auto">
+    <!-- Formulario -->
+    <form class="flex-1 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 bg-transparent">
+      <div>
+        <label class="block text-xs font-bold text-gray-300 mb-2 tracking-widest">NOMBRE</label>
+        <input type="text" class="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg bg-[#23243a] text-gray-200 border border-[#23243a] focus:outline-none focus:ring-2 focus:ring-green-400" />
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-gray-300 mb-2 tracking-widest">APELLIDO</label>
+        <input type="text" class="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg bg-[#23243a] text-gray-200 border border-[#23243a] focus:outline-none focus:ring-2 focus:ring-green-400" />
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-gray-300 mb-2 tracking-widest">N. DOCUMENTO</label>
+        <input type="text" class="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg bg-[#23243a] text-gray-200 border border-[#23243a] focus:outline-none focus:ring-2 focus:ring-green-400" placeholder="V00000000" />
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-gray-300 mb-2 tracking-widest">PAÍS</label>
+        <input type="text" class="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg bg-[#23243a] text-gray-200 border border-[#23243a] focus:outline-none focus:ring-2 focus:ring-green-400" />
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-gray-300 mb-2 tracking-widest">ESTADO</label>
+        <select class="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg bg-[#23243a] text-gray-200 border border-[#23243a] focus:outline-none focus:ring-2 focus:ring-green-400">
+          <option>Selecciona</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-gray-300 mb-2 tracking-widest">CIUDAD</label>
+        <select class="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg bg-[#23243a] text-gray-200 border border-[#23243a] focus:outline-none focus:ring-2 focus:ring-green-400">
+          <option>Selecciona</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-gray-300 mb-2 tracking-widest">NÚMERO DE TELÉFONO</label>
+        <input type="text" class="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg bg-[#23243a] text-gray-200 border border-[#23243a] focus:outline-none focus:ring-2 focus:ring-green-400" />
+      </div>
+      <div class="md:col-span-2">
+        <label class="block text-xs font-bold text-gray-300 mb-2 tracking-widest">DIRECCIÓN</label>
+        <input type="text" class="w-full px-3 py-2 md:px-4 md:py-3 rounded-lg bg-[#23243a] text-gray-200 border border-[#23243a] focus:outline-none focus:ring-2 focus:ring-green-400" />
+      </div>
+      <div class="col-span-1">
+        <button type="button" class="w-full py-3 rounded-lg bg-gray-600 text-gray-300 font-bold text-lg transition cursor-not-allowed" disabled>CANCELAR</button>
+      </div>
+      <div class="col-span-1">
+        <button type="submit" class="w-full py-3 rounded-lg bg-[#7f52ff] hover:bg-[#6d45ff] text-white font-bold text-lg transition">CONTINUAR</button>
+      </div>
+    </form>
+    <!-- Resumen de compra -->
+    <div class="w-full lg:w-[420px] bg-[#23243a] rounded-xl p-4 md:p-6 shadow-lg mt-6 lg:mt-0">
+      <h2 class="text-lg font-bold text-gray-300 mb-4">MI COMPRA</h2>
+      <div class="flex flex-col sm:flex-row gap-4 mb-4 items-center sm:items-start">
+        <img src="../../../assets/images/clashroyale.png" alt="Torneo" class="w-24 h-24 object-cover rounded-lg border-2 border-green-400" />
+        <div class="flex flex-col justify-between">
+          <div>
+            <span class="block text-xs text-green-400 font-bold mb-1">INSCRIPCIÓN TORNEO</span>
+            <span class="block text-white font-semibold leading-tight">League of Legends: Torneo Aniversario</span>
+          </div>
+          <span class="block text-xs text-green-400 mt-2">24/11/2025 // 09:00 AM</span>
+        </div>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-gray-300 text-xs">
+          <thead>
+            <tr class="border-b border-gray-700">
+              <th class="py-2">PRODUCTO</th>
+              <th class="py-2">PRECIO</th>
+              <th class="py-2">CANTIDAD</th>
+              <th class="py-2">TOTAL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="py-2">Equipo inscripción</td>
+              <td class="py-2">$20.00</td>
+              <td class="py-2">1 equipo</td>
+              <td class="py-2">$20.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

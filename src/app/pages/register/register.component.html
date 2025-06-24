@@ -1,0 +1,69 @@
+<div class="min-h-screen flex flex-col md:flex-row" style="background-color: #1E1E1E;">
+  <!-- Imagen Arriba en móvil, Izquierda en desktop -->
+  <div class="w-full md:w-1/2 h-48 md:h-auto flex items-center justify-center bg-[#2a1d3a] relative">
+    <img src="../../../assets/images/logob83 1.png" alt="register-image" class="object-cover w-full h-full max-h-60 md:max-h-screen" />
+  </div>
+  <!-- Formulario -->
+  <div class="flex flex-col justify-center w-full md:w-1/2 bg-[#181924] px-4 sm:px-8 md:px-20 py-8 md:py-12 relative rounded-t-3xl md:rounded-none shadow-lg md:shadow-none -mt-8 md:mt-0 z-10">
+    <!-- Botón X en círculo -->
+    <button type="button" class="absolute top-4 right-4 md:top-6 md:right-6 z-10 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#23243a] hover:bg-green-400 transition-colors border-2 border-green-400"
+      (click)="goHome()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 md:w-6 md:h-6 text-green-400 group-hover:text-[#181924]">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <h2 class="text-2xl md:text-5xl font-extrabold text-white mb-2 mt-8 md:mt-0">REGISTRARME EN B8</h2>
+    <p class="text-base md:text-lg text-gray-300 mb-6 md:mb-8">Ingresa tus datos y crea tu cuenta con nosotros</p>
+    <form class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+      <div>
+        <label class="block text-xs md:text-sm font-extrabold text-gray-300 mb-2 tracking-widest">NOMBRE Y APELLIDO</label>
+        <input type="text" class="w-full px-4 py-3 rounded-lg bg-[#23243a] text-gray-200 border border-[#23243a] focus:outline-none focus:ring-2 focus:ring-white" name="fullname" ngModel required />
+      </div>
+      <div>
+        <label class="block text-xs md:text-sm font-extrabold text-gray-300 mb-2 tracking-widest">CORREO</label>
+        <input type="email" class="w-full px-4 py-3 rounded-lg bg-[#23243a] text-gray-200 border border-[#23243a] focus:outline-none focus:ring-2 focus:ring-white" name="email" ngModel required />
+      </div>
+      <div>
+        <label class="block text-xs md:text-sm font-extrabold text-gray-300 mb-2 tracking-widest">NOMBRE DE USUARIO</label>
+        <input type="text" class="w-full px-4 py-3 rounded-lg bg-[#23243a] text-gray-200 border border-[#23243a] focus:outline-none focus:ring-2 focus:ring-white" name="username" ngModel required />
+      </div>
+      <div>
+        <label class="block text-xs md:text-sm font-extrabold text-gray-300 mb-2 tracking-widest">FECHA DE NACIMIENTO</label>
+        <input type="date" class="w-full px-4 py-3 rounded-lg bg-[#23243a] text-gray-200 border border-[#23243a] focus:outline-none focus:ring-2 focus:ring-white" name="birthdate" ngModel required />
+      </div>
+      <div>
+        <label class="block text-xs md:text-sm font-extrabold text-gray-300 mb-2 tracking-widest">CONTRASEÑA</label>
+        <div class="relative">
+          <input [type]="showPassword ? 'text' : 'password'" class="w-full px-4 py-3 rounded-lg bg-[#23243a] text-gray-200 border border-[#23243a] focus:outline-none focus:ring-2 focus:ring-white pr-10" name="password" ngModel required />
+          <button type="button" (click)="togglePassword()" tabindex="-1" class="absolute right-2 md:right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-green-400">
+            <img src="../../../assets/svgs/fi-rs-eye.svg" alt="Mostrar contraseña" class="w-5 h-5" />
+          </button>
+        </div>
+      </div>
+      <div>
+        <label class="block text-xs md:text-sm font-extrabold text-gray-300 mb-2 tracking-widest">CONFIRMAR CONTRASEÑA</label>
+        <div class="relative">
+          <input [type]="showConfirmPassword ? 'text' : 'password'" class="w-full px-4 py-3 rounded-lg bg-[#23243a] text-gray-200 border border-[#23243a] focus:outline-none focus:ring-2 focus:ring-white pr-10" name="confirmPassword" ngModel required />
+          <button type="button" (click)="toggleConfirmPassword()" tabindex="-1" class="absolute right-2 md:right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-green-400">
+            <img src="../../../assets/svgs/fi-rs-eye.svg" alt="Mostrar contraseña" class="w-5 h-5" />
+          </button>
+        </div>
+      </div>
+      <div class="md:col-span-2 flex flex-col gap-3 mt-2">
+        <div *ngIf="fieldError" class="text-red-500 text-xs font-bold">{{ fieldError }}</div>
+        <div *ngIf="nameError" class="text-red-500 text-xs font-bold">{{ nameError }}</div>
+        <div *ngIf="birthdateError" class="text-red-500 text-xs font-bold">{{ birthdateError }}</div>
+        <div *ngIf="emailError" class="text-red-500 text-xs font-bold">{{ emailError }}</div>
+        <div *ngIf="passwordError" class="text-red-500 text-xs font-bold">{{ passwordError }}</div>
+        <div *ngIf="confirmPasswordError" class="text-red-500 text-xs font-bold">{{ confirmPasswordError }}</div>
+        <div class="flex items-center">
+          <input type="checkbox" class="accent-green-400 mr-2" [(ngModel)]="acceptTerms" name="terms" />
+          <span class="text-xs text-gray-400">Al crear una cuenta estas aceptando los <a href="#" class="text-[#7f52ff] underline">Términos<br>y Condiciones</a> de B8 y nuestras <a href="#" class="text-[#7f52ff] underline">Políticas de Privacidad</a>.</span>
+        </div>
+        <div *ngIf="showTermsError" class="text-red-500 text-xs font-bold">Debes aceptar los términos y condiciones</div>
+        <div *ngIf="showSuccess" class="text-green-400 text-xs font-bold">Registrado correctamente</div>
+        <button type="submit" class="w-full md:w-2/4 py-3 rounded-lg bg-[#7f52ff] hover:bg-[#6d45ff] text-black font-extrabold text-xl md:text-2xl transition mt-2">REGISTRARME</button>
+      </div>
+    </form>
+  </div>
+</div>

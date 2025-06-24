@@ -1,0 +1,9 @@
+/* Tailwind utility classes are used for almost all styling. Add custom styles here if needed. */
+
+/* Example: highlight the current step in the progress bar */
+.progress-step-active {
+  @apply text-green-400 font-bold;
+}
+.progress-step {
+  @apply text-gray-400;
+}

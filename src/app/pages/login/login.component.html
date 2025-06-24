@@ -1,0 +1,52 @@
+
+<div class="min-h-screen flex">
+  <!-- Imagen Izquierda -->
+  <div class="hidden md:flex w-3/5 bg-[#18312a] items-center justify-center relative">
+    <img src="../../../assets/images/logob82 1.png" alt="login-image" class="object-cover w-full h-full max-h-screen" />
+  </div>
+  <!-- Formulario Derecha -->
+  <div class="flex flex-col justify-center w-full md:w-2/5 bg-[#181924] px-8 md:px-28 py-12 relative">
+    <!-- Botón X en círculo -->
+    <button type="button" class="absolute top-6 right-6 z-10 flex items-center justify-center w-10 h-10 rounded-full bg-[#23243a] hover:bg-green-400 transition-colors border-2 border-green-400" (click)="goHome()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-green-400 group-hover:text-[#181924]">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-2 text-center w-full">BIENVENIDO</h2>
+    <p class="text-lg text-gray-300 mb-8 text-center w-full">Ingresa los datos de tu cuenta</p>
+    <form class="space-y-6">
+      <div>
+        <label class="block text-sm md:text-base font-extrabold text-white mb-2 tracking-widest" for="username">USUARIO O CORREO</label>
+        <input id="username" name="username" type="text" autocomplete="username" class="w-full px-4 py-3 rounded-lg bg-[#23243a] text-gray-200 border border-[#23243a] focus:outline-none focus:ring-2 focus:ring-white" value="@thechris2486" />
+      </div>
+      <div>
+        <label class="block text-sm md:text-base font-extrabold text-white mb-2 tracking-widest" for="password">CONTRASEÑA</label>
+        <div class="relative">
+          <input id="password" name="password"
+            [type]="showPassword ? 'text' : 'password'"
+            autocomplete="current-password"
+            class="w-full px-4 py-3 rounded-lg bg-[#23243a] text-gray-200 border border-[#23243a] focus:outline-none focus:ring-2 focus:ring-white pr-12"
+            value="penericosexoculo" />
+          <button type="button" (click)="togglePassword()" tabindex="-1" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-green-400">
+            <img src="../../../assets/svgs/fi-rs-eye.svg" alt="Mostrar contraseña" class="w-5 h-5" />
+          </button>
+        </div>
+        <div class="flex items-center justify-between mt-2">
+          <label class="flex items-center text-xs text-gray-400 select-none">
+            <input type="checkbox" class="accent-green-400 mr-2" checked />
+            Recordar por 30 días
+          </label>
+          <a href="#" class="text-xs text-[#6D45FF] underline hover:text-[#7f52ff]">Olvidé mi contraseña</a>
+        </div>
+      </div>
+      <button type="submit" class="w-full py-3 rounded-lg bg-[#7f52ff] text-black font-extrabold text-2xl transition mb-4">ENTRAR</button>
+      <div class="flex flex-row gap-6 justify-center mb-6">
+        <button type="button" class="w-1/2 h-14 rounded-lg bg-green-400"></button>
+        <button type="button" class="w-1/2 h-14 rounded-lg bg-green-400"></button>
+      </div>
+      <div class="flex flex-col items-center mt-2 text-base">
+        <span class="text-white">No tengo cuenta <a routerLink="/register" class="text-green-400 underline hover:text-green-500" style="cursor:pointer">Registrarme</a></span>
+      </div>
+    </form>
+  </div>
+</div>
